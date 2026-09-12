@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "Office Code Pro";
+    src: url("fonts/officecodepro-regular-webfont.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    background: url("img/background.webp") center / 150% no-repeat fixed;
+    background-position: center top;
+    image-rendering: pixelated;
+}
+
+body {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 0 1rem;
+    text-align: center;
+    font-family: "Office Code Pro", ui-monospace, monospace;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+    margin-top: 25px;
+    color: white;
+}
+
+.banner {
+    width: 500;
+    height: 279;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+nav img {
+    width: 32px;
+    height: 32px;
+    image-rendering: auto;
+    background-color: white;
+    padding: 5px;
+    border-radius: 8px;
+}
