@@ -8,15 +8,13 @@
 }
 
 html {
-    background: url("img/background.webp") center / 150% no-repeat fixed;
-    background-position: center top;
+    background: #5d321e url("img/background.webp") center top / 150% no-repeat fixed;
     image-rendering: pixelated;
 }
 
 body {
     max-width: 500px;
-    margin: 0 auto;
-    margin-top: 50px;
+    margin: 50px auto 0;
     padding: 0 1rem;
     text-align: center;
     font-family: "Office Code Pro", ui-monospace, monospace;
@@ -30,15 +28,23 @@ img {
 }
 
 h1 {
-    margin: 0;
+    margin: 25px 0 0;
     font-size: 3rem;
-    margin-top: 25px;
     color: white;
 }
 
-.banner {
-    width: 500;
-    height: 279;
+h2 {
+    margin: 10px 0 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+p, a {
+    color: white;
+}
+
+.banner img {
+    aspect-ratio: 500 / 279;
 }
 
 nav {
@@ -56,4 +62,10 @@ nav img {
     background-color: white;
     padding: 5px;
     border-radius: 8px;
+}
+
+nav a:hover img,
+nav a:focus-visible img {
+    transform: scale(1.1);
+    outline: 2px solid white;
 }
