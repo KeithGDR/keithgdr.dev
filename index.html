@@ -35,34 +35,46 @@
             <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
         </svg>
 
-        <main class="card">
-            <div class="banner">
-                <img src="/img/banner.webp" alt="" width="900" height="677" fetchpriority="high">
-            </div>
-
+        <main class="card split">
             <header class="profile">
-                <img class="avatar" src="/img/avatar.webp" alt="KeithGDR's avatar" width="256" height="256">
+                <img class="avatar" src="/img/avatar.webp" alt="KeithGDR's avatar" width="256" height="256" fetchpriority="high">
                 <h1>KeithGDR</h1>
-                <p class="tagline">Programmer &middot; Game Developer &middot; Modder</p>
+                <p class="tagline">Programmer<br>Game Developer<br>Modder</p>
+
+                <!-- Links: copy an <li> to add a new one. The icon id must match a <symbol> above. -->
+                <nav aria-label="Links">
+                    <ul class="socials">
+                        <li><a href="https://github.com/KeithGDR" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg class="icon"><use href="#i-github"/></svg></a></li>
+                        <li><a href="https://x.com/keithgdr_" target="_blank" rel="noopener" aria-label="X" title="X"><svg class="icon"><use href="#i-x"/></svg></a></li>
+                        <li><a href="https://youtube.com/@KeithGDR" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg class="icon"><use href="#i-youtube"/></svg></a></li>
+                        <li><a href="https://twitch.tv/keithgdr" target="_blank" rel="noopener" aria-label="Twitch" title="Twitch"><svg class="icon"><use href="#i-twitch"/></svg></a></li>
+                        <li><a href="https://steamcommunity.com/id/keithgdr/" target="_blank" rel="noopener" aria-label="Steam" title="Steam"><svg class="icon"><use href="#i-steam"/></svg></a></li>
+                        <li><a href="https://keithgdr.itch.io/" target="_blank" rel="noopener" aria-label="itch.io" title="itch.io"><svg class="icon"><use href="#i-itch"/></svg></a></li>
+                    </ul>
+                </nav>
             </header>
 
-            <!-- About me: edit the text below. Add or remove <p> paragraphs as needed. -->
-            <section class="about" aria-label="About me">
-                <p>Traditional programmer, game developer and modder who does fancy shit.</p>
-                <p>Currently working on a game project which will get posted here eventually, <b>stay tuned</b>.</p>
-            </section>
+            <div class="content">
+                <!-- About me: edit the text below. Add or remove <p> paragraphs as needed. -->
+                <section aria-labelledby="about-heading">
+                    <h2 id="about-heading">About</h2>
+                    <p>Traditional programmer, game developer and modder who does fancy shit.</p>
+                    <p>Currently working on a game project which will get posted here eventually, <b>stay tuned</b>.</p>
+                </section>
 
-            <!-- Links: copy an <li> to add a new one. The icon id must match a <symbol> above. -->
-            <nav aria-label="Links">
-                <ul class="links">
-                    <li><a href="https://github.com/KeithGDR" target="_blank" rel="noopener"><svg class="icon"><use href="#i-github"/></svg><span>GitHub</span><svg class="arrow"><use href="#i-arrow"/></svg></a></li>
-                    <li><a href="https://x.com/keithgdr_" target="_blank" rel="noopener"><svg class="icon"><use href="#i-x"/></svg><span>X</span><svg class="arrow"><use href="#i-arrow"/></svg></a></li>
-                    <li><a href="https://youtube.com/@KeithGDR" target="_blank" rel="noopener"><svg class="icon"><use href="#i-youtube"/></svg><span>YouTube</span><svg class="arrow"><use href="#i-arrow"/></svg></a></li>
-                    <li><a href="https://twitch.tv/keithgdr" target="_blank" rel="noopener"><svg class="icon"><use href="#i-twitch"/></svg><span>Twitch</span><svg class="arrow"><use href="#i-arrow"/></svg></a></li>
-                    <li><a href="https://steamcommunity.com/id/keithgdr/" target="_blank" rel="noopener"><svg class="icon"><use href="#i-steam"/></svg><span>Steam</span><svg class="arrow"><use href="#i-arrow"/></svg></a></li>
-                    <li><a href="https://keithgdr.itch.io/" target="_blank" rel="noopener"><svg class="icon"><use href="#i-itch"/></svg><span>itch.io</span><svg class="arrow"><use href="#i-arrow"/></svg></a></li>
-                </ul>
-            </nav>
+                <!-- Projects: copy an <li> to add a new one. -->
+                <section aria-labelledby="projects-heading">
+                    <h2 id="projects-heading">Projects</h2>
+                    <ul class="projects">
+                        <li><a href="https://github.com/KeithGDR/tf2-hungry-heavy-delivery" target="_blank" rel="noopener"><span class="name">Hungry Heavy Delivery</span><span class="kind">TF2 gamemode</span><span class="desc">Scouts race to deliver pizzas for Chef Heavy.</span></a></li>
+                        <li><a href="https://github.com/KeithGDR/l4d2-charger-racing" target="_blank" rel="noopener"><span class="name">Charger Racing</span><span class="kind">L4D2 gamemode</span><span class="desc">Race other players as Chargers.</span></a></li>
+                        <li><a href="https://github.com/KeithGDR/l4d2-tag-team-coop" target="_blank" rel="noopener"><span class="name">Tag Team Co-op</span><span class="kind">L4D2 gamemode</span><span class="desc">Team up with a partner and out-score the other teams.</span></a></li>
+                        <li><a href="https://github.com/KeithGDR/sm-store" target="_blank" rel="noopener"><span class="name">sm-store</span><span class="kind">SourceMod plugin</span><span class="desc">A store plugin, based on the original by Alongub.</span></a></li>
+                        <li><a href="https://github.com/KeithGDR/chat-processor" target="_blank" rel="noopener"><span class="name">Chat Processor</span><span class="kind">SourceMod plugin</span><span class="desc">Lets other plugins add and manage chat features.</span></a></li>
+                    </ul>
+                    <a class="more" href="https://github.com/KeithGDR?tab=repositories" target="_blank" rel="noopener">All projects on GitHub <svg class="arrow"><use href="#i-arrow"/></svg></a>
+                </section>
+            </div>
         </main>
 
         <footer>&copy; <span id="year">2026</span> KeithGDR</footer>
