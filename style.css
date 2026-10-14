@@ -37,11 +37,22 @@ body {
     justify-content: center;
     gap: 24px;
     color: var(--text);
-    background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(240, 138, 60, 0.18), transparent 70%) no-repeat;
     font-family: "Office Code Pro", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     line-height: 1.6;
     text-align: center;
     -webkit-text-size-adjust: 100%;
+}
+
+/* Background: a fixed layer instead of background-attachment: fixed, which iOS Safari ignores. */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(rgba(13, 15, 20, 0.55), rgba(13, 15, 20, 0.85)),
+        url("/img/background.webp") center / cover no-repeat,
+        var(--bg);
 }
 
 img {
