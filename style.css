@@ -211,7 +211,8 @@ h2 {
     font-size: 0.92rem;
 }
 
-.content b {
+.content b,
+.now b {
     color: var(--accent);
     font-weight: 400;
 }
