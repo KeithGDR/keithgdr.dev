@@ -1,0 +1,36 @@
+# Caddy config for keithgdr.dev. Installed at /etc/caddy/sites/keithgdr.dev.caddy,
+# which the main /etc/caddy/Caddyfile (from the Kdex repo) imports.
+# Caddy gets and renews the LetsEncrypt certificates and redirects HTTP to HTTPS by itself.
+
+keithgdr.dev {
+	root * /var/www/keithgdr.dev
+	encode zstd gzip
+
+	header {
+		Strict-Transport-Security "max-age=63072000"
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		-Server
+	}
+
+	# Don't expose the git repo, server config or docs.
+	@hidden path /.* /deploy/* *.md
+	error @hidden 404
+
+	# Pages: always revalidate so changes show up right away. Assets: cache for a week.
+	@pages path / *.html
+	header @pages Cache-Control "no-cache"
+	@assets path *.css *.js *.png *.jpg *.webp *.svg *.woff2
+	header @assets Cache-Control "public, max-age=604800"
+
+	file_server
+
+	handle_errors {
+		rewrite * /404.html
+		file_server
+	}
+}
+
+www.keithgdr.dev {
+	redir https://keithgdr.dev{uri} permanent
+}
