@@ -87,7 +87,7 @@ a {
 .split {
     max-width: 860px;
     display: grid;
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: 260px 1fr;
 }
 
 .profile {
@@ -125,20 +125,20 @@ h1 {
     margin: 24px auto 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(3, 44px);
+    grid-template-columns: repeat(3, 56px);
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .socials a {
     display: grid;
     place-items: center;
-    width: 44px;
-    height: 44px;
+    width: 56px;
+    height: 56px;
     color: var(--text);
     background: var(--surface-sunken);
     border: 1px solid var(--border);
-    border-radius: 10px;
+    border-radius: 12px;
     transition: border-color 0.15s, color 0.15s, transform 0.15s;
 }
 
@@ -247,8 +247,8 @@ h2 {
 }
 
 .icon {
-    width: 20px;
-    height: 20px;
+    width: 26px;
+    height: 26px;
 }
 
 .arrow {
@@ -267,19 +267,9 @@ h2 {
         border-bottom: 1px solid var(--border);
     }
 
-    .socials {
-        grid-template-columns: repeat(6, 44px);
-        gap: 8px;
-    }
 
     .content {
         padding: 28px 24px;
-    }
-}
-
-@media (max-width: 360px) {
-    .socials {
-        grid-template-columns: repeat(3, 44px);
     }
 }
 
